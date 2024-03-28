@@ -6,6 +6,7 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.advweek4160420105.databinding.StudentListItemBinding
 import com.example.advweek4160420105.model.Student
+import com.example.advweek4160420105.util.loadImage
 
 class StudentListAdapter(val studentList:ArrayList<Student>)
     :RecyclerView.Adapter<StudentListAdapter.StudentViewHolder>()
@@ -20,6 +21,8 @@ class StudentListAdapter(val studentList:ArrayList<Student>)
     override fun onBindViewHolder(holder: StudentViewHolder, position: Int) {
         holder.binding.txtID.text = studentList[position].id
         holder.binding.txtName.text = studentList[position].name
+
+        holder.binding.imageView.loadImage(studentList[position].photoUrl.toString(), holder.binding.progressBar)
 
         holder.binding.btnDetail.setOnClickListener {
             val action = StudentListFragmentDirections.actionStudentDetailFragment()
