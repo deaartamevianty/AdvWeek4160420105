@@ -12,11 +12,6 @@ import com.example.advweek4160420105.R
 import com.example.advweek4160420105.databinding.FragmentStudentListBinding
 import com.example.advweek4160420105.viewmodel.ListViewModel
 
-/**
- * A simple [Fragment] subclass.
- * Use the [StudentListFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class StudentListFragment : Fragment() {
 
     private lateinit var viewModel:ListViewModel
